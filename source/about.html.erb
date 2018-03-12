@@ -1,24 +1,23 @@
----
-title: Le Wagon - Middleman - About
----
-
-<div id="about">
-  <div class="about-content">
-    <h1>This template was built with <i class="fa fa-heart"></i> by</h1>
-    <ul class="list-inline">
-      <% data.users.each do |user| %>
-        <li>
-          <% link_to "https://kitt.lewagon.com/alumni/#{user.github_nickname}", target: "_blank" do %>
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.github_nickname}", class: "img-circle" %>
-          <% end %>
-          <h2><%= user.name %></h2>
-          <p>
-            <% link_to "https://github.com/#{user.github_nickname}", target: "_blank" do %>
-              <i class="fa fa-github"></i> <%= user.github_nickname %>
-            <% end %>
-          </p>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+<div class="fond"  style="background-image: url(<%= image_path 'cabinet.jpg'%>)">
+<div class="col-xs-12 col-sm-8 partiegauche">
+<br>
+<br>
+<h2 class="text-center">Un psychologue c'est quoi ?</h2>
+<br>
+<br>
+<p class="text-center">
+Un psychologue est un professionnel de la psychologie, discipline vaste et complexe qui regroupe de nombreux courants théoriques et pratiques autour de l'analyse des faits psychiques individuels et de groupe et de leur traitement évolutif et réorganisateur par des méthodes et démarches seulement psychologiques. Le psychologue, qui est spécialisé dans un courant scientifique spécifique, est donc un professionnel du fonctionnement psychique dans ses aspects subjectifs, affectifs et cognitifs et des leurs psychopathologies, ainsi que du comportement humain, de la personnalité et des relations interpersonnelles.
+<br><br>
+Il intervient de façon transversale selon son libre choix des divers courants et références théoriques qui orientent sa pratique, dans tous les domaines de la société (éducation, santé, médico-social, justice, travail, sport, etc.) avec pour objectif de préserver, évaluer, maintenir ou améliorer le bien-être, l'état psychique plus spécifiquement subjectif, affectif ou cognitif ou encore la qualité de vie de l'individu et sa santé psychique, développer son autonomie mentale, ses capacités ou favoriser son intégration sociale. Par conséquent, selon sa spécialisation (psychologie clinique, psychologie cognitive, psychologie du développement, psychologie du travail, orientation professionnelle, etc.), le psychologue utilise des méthodes d'analyse et d'intervention spécifiques basées sur des approches relationnelles et théoriques variées.
+</p>
+</div>
+<div class="col-xs-12 col-sm-4 carteinfo text-center">
+  <br>
+  <br>
+  <br>
+<h2>Me retrouvez</h2>
+<img src="images/map.png" style="height: 100px" alt="">
+<p>adresse</p>
+<p>téléphone</p>
+</div>
 </div>
