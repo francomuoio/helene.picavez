@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title></title>
-    <link href="stylesheets/application-57b942f9.css" rel="stylesheet" />
+    <link href="stylesheets/application-ef346eb9.css" rel="stylesheet" />
     <script src="javascripts/application-93de88c9.js"></script>
     <link href="images/favicon-f15af148.png" rel="icon" type="image/png" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -21,20 +21,24 @@
     </a>
     <!-- Right Navigation -->
     <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <a href="mapresentation.html" class="navbar-wagon-item navbar-wagon-link">Mon parcours</a>
       <a href="parcours.html" class="navbar-wagon-item navbar-wagon-link">Pourquoi consulter ?</a>
       <a href="about.html" class="navbar-wagon-item navbar-wagon-link">Mon domaine d'activité</a>
       <a href="commentchoisir.html" class="navbar-wagon-item navbar-wagon-link">Comment choisir son psy ?</a>
       <a href="tarif.html" class="navbar-wagon-item navbar-wagon-link">Mes tarifs</a>
+
     </div>
     <!-- Dropdown appearing on mobile only -->
     <div class="navbar-wagon-item hidden-md hidden-lg">
       <div class="dropdown">
         <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="mapresentation.html">Mon parcours</a></li>
           <li><a href="parcours.html">Pourquoi consulter ?</a></li>
           <li><a href="about.html">Mon domaine d'activité</a></li>
           <li><a href="commentchoisir.html">Comment choisir son psy ?</a></li>
           <li><a href="tarif.html">Mes tarifs</a></li>
+
         </ul>
       </div>
     </div>
@@ -46,9 +50,11 @@
 <div class="cardcontactgauche">
 <h2 class="text-center">Mon domaine d'activité</h2>
 <p>
-<br><br>
+<br>
+<p class="text-center">
 <strong class="text-center">TECC </strong>
-<br><br>
+</p>
+<br>
 QU’EST CE QUE LES THÉRAPIES ÉMOTIONNELLES, COGNITIVES ET COMPORTEMENTALES (TECC /TCC) ?
 Les TCC/TECC se basent sur l’observation et la modification concrète de votre mode de fonctionnement. Elles impliquent également une relation d’écoute bienveillante, de soutien et de confiance, indispensable à toute thérapie.
 <br><br>
@@ -71,7 +77,8 @@ Il s’agit donc dans un premier temps, d’apprendre avec l’aide du thérapeu
 Les TECC proposent une relation de collaboration avec le thérapeute et le travail s’effectue en face à face. L’analyse des problèmes, la définition des objectifs à atteindre, et le plan d’action sont tous élaborés ensemble, d’un commun accord avec le patient. Ce dernier est donc acteur de sa thérapie.
 
 <br> <br>
-<strong class="text-center">EMDR </strong><br> <br>
+<p class="text-center"><strong class="text-center">EMDR </strong></p>
+<br>
 Ses initiales viennent de son appellation anglo-saxonne : Eye-Movement Desensitization and Reprocessing, ou Désensibilisation et Retraitement par les Mouvements Oculaires.
 <br><br>
 La thérapie EMDR est une nouvelle approche de psychothérapie qui utilise la stimulation sensorielle des deux côtés du corps, soit par le mouvement des yeux soit par des stimuli auditifs ou cutanés, pour induire une résolution rapide des symptômes liés à des événements du passé.
@@ -89,7 +96,7 @@ Plusieurs études contrôlées ont démontré la remarquable efficacité de la t
 <div class="cardcontact text-center" style="position: fixed;">
 <h2>Me retrouver</h2>
 <br>
-<img src="images/map-19fdf88a.png" style="height: 100px; width: 200px;" alt="">
+<div id="map" style="width: 100%; height: 200px;"></div>
 <br>
 <br>
 <p>58 Rue du Général de Gaulle <br>59133 Phalempin</p>
@@ -98,6 +105,27 @@ Plusieurs études contrôlées ont démontré la remarquable efficacité de la t
 </div>
 </div>
 </div>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(50.516624,3.0172443000000158);
+
+  var myOptions = {
+      zoom: 15,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: []
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "Mon cabinet"
+  });
+</script>
 
     <div class="row footer text-center">
 <!--   <div class="col-xs-12 col-sm-6">
@@ -147,9 +175,10 @@ Plusieurs études contrôlées ont démontré la remarquable efficacité de la t
       </div>
       <div class="col-xs-4">
         <li>
-          <a href="#">Mentions légales</a>
+          <a href="mentionslegales.html">Mentions légales</a>
         </li>
       </div>
+
       </ul>
       </div>
 </div>
