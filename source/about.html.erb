@@ -3,9 +3,11 @@
 <div class="cardcontactgauche">
 <h2 class="text-center">Mon domaine d'activité</h2>
 <p>
-<br><br>
+<br>
+<p class="text-center">
 <strong class="text-center">TECC </strong>
-<br><br>
+</p>
+<br>
 QU’EST CE QUE LES THÉRAPIES ÉMOTIONNELLES, COGNITIVES ET COMPORTEMENTALES (TECC /TCC) ?
 Les TCC/TECC se basent sur l’observation et la modification concrète de votre mode de fonctionnement. Elles impliquent également une relation d’écoute bienveillante, de soutien et de confiance, indispensable à toute thérapie.
 <br><br>
@@ -28,7 +30,8 @@ Il s’agit donc dans un premier temps, d’apprendre avec l’aide du thérapeu
 Les TECC proposent une relation de collaboration avec le thérapeute et le travail s’effectue en face à face. L’analyse des problèmes, la définition des objectifs à atteindre, et le plan d’action sont tous élaborés ensemble, d’un commun accord avec le patient. Ce dernier est donc acteur de sa thérapie.
 
 <br> <br>
-<strong class="text-center">EMDR </strong><br> <br>
+<p class="text-center"><strong class="text-center">EMDR </strong></p>
+<br>
 Ses initiales viennent de son appellation anglo-saxonne : Eye-Movement Desensitization and Reprocessing, ou Désensibilisation et Retraitement par les Mouvements Oculaires.
 <br><br>
 La thérapie EMDR est une nouvelle approche de psychothérapie qui utilise la stimulation sensorielle des deux côtés du corps, soit par le mouvement des yeux soit par des stimuli auditifs ou cutanés, pour induire une résolution rapide des symptômes liés à des événements du passé.
@@ -46,7 +49,7 @@ Plusieurs études contrôlées ont démontré la remarquable efficacité de la t
 <div class="cardcontact text-center" style="position: fixed;">
 <h2>Me retrouver</h2>
 <br>
-<img src="images/map.png" style="height: 100px; width: 200px;" alt="">
+<div id="map" style="width: 100%; height: 200px;"></div>
 <br>
 <br>
 <p>58 Rue du Général de Gaulle <br>59133 Phalempin</p>
@@ -55,3 +58,24 @@ Plusieurs études contrôlées ont démontré la remarquable efficacité de la t
 </div>
 </div>
 </div>
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(50.516624,3.0172443000000158);
+
+  var myOptions = {
+      zoom: 15,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: []
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "Mon cabinet"
+  });
+</script>

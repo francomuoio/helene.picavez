@@ -1,4 +1,4 @@
-<div class="row fondchoisir" style="background-image: url(<%= image_path 'cabinet.jpg'%>)">
+<div class="row fondchoisir" style="background-image: url(<%= image_path 'bureauhelene.jpg'%>)">
 <div class="col-xs-12 col-sm-8 partiegauche">
 <div class="cardcontactgauche">
 <h2 class="text-center">Comment choisir son psy ?</h2>
@@ -60,7 +60,7 @@ Il y a nombre de différentes psychothérapies. Dans les émergentes, vous enten
 <div class="cardcontact text-center" style="position: fixed;">
 <h2>Me retrouver</h2>
 <br>
-<img src="images/map.png" style="height: 100px; width: 200px;" alt="">
+<div id="map" style="width: 100%; height: 200px;"></div>
 <br>
 <br>
 <p>58 Rue du Général de Gaulle <br>59133 Phalempin</p>
@@ -69,3 +69,25 @@ Il y a nombre de différentes psychothérapies. Dans les émergentes, vous enten
 </div>
 </div>
 </div>
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(50.516624,3.0172443000000158);
+
+  var myOptions = {
+      zoom: 15,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: []
+  };
+
+  var map = new google.maps.Map(document.getElementById('map'), myOptions);
+  var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "You are here!"
+  });
+</script>
