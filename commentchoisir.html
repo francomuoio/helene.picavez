@@ -119,25 +119,22 @@ Il y a nombre de différentes psychothérapies. Dans les émergentes, vous enten
 
 
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-<script type="text/javascript">
-  var myLatlng = new google.maps.LatLng(50.516624,3.0172443000000158);
-
-  var myOptions = {
-      zoom: 15,
-      center: myLatlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: []
-  };
-
-  var map = new google.maps.Map(document.getElementById('map'), myOptions);
-  var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: "You are here!"
-  });
-</script>
+    <script>
+      function initMap() {
+        var uluru = {lat: 50.516624, lng: 3.0172443000000158};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUMdGkbcdLu1QCk5hbog_NwwvQjmp4rZs&callback=initMap">
+    </script>
 
     <div class="row footer text-center">
 <!--   <div class="col-xs-12 col-sm-6">
